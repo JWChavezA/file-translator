@@ -1,38 +1,32 @@
 # File Translator
 
-Este proyecto es una aplicación de escritorio en Python que traduce archivos de texto,
-PDF y Word (`.txt`, `.pdf`, `.docx`) de un idioma a otro. Se basa en la librería
-[googletrans](https://pypi.org/project/googletrans/) (versión no oficial de Google Translate)
-y en otras herramientas de Python para manejar los archivos.
+This project is a Python desktop application that translates text, PDF, and Word (`.txt`, `.pdf`, `.docx`) files from one language to another. It uses the [googletrans](https://pypi.org/project/googletrans/) library (an unofficial version of Google Translate) and other Python tools to handle files.
 
-> **Aviso**: `googletrans` es una librería no oficial. Puede romperse o fallar por cambios
-en la API de Google. Si necesitas una alternativa más estable, considera usar la
-[API oficial de DeepL](https://www.deepl.com/pro-api) o un modelo de traducción offline
-(Marian, M2M100, etc.).
+> **Note**: `googletrans` is not an official library. It might break due to changes in the Google API. If you need a more stable alternative, consider using the [official DeepL API](https://www.deepl.com/pro-api) or an offline translation model (Marian, M2M100, etc.).
 
-## Características
+## Features
 
-- **Interfaz gráfica** con [Tkinter](https://docs.python.org/3/library/tkinter.html).
-- **Traducción automática** usando `googletrans`.
-- **Detección automática** del idioma de origen (opcional).
-- **Soporta** `.txt`, `.pdf`, `.docx`.
-- **Mantiene imágenes** y formato básico en archivos `.docx`.
-- **Barra de progreso** y opción de **cancelar** el proceso de traducción.
-- **Reintentos automáticos** hasta 3 veces en caso de fallos.
-- **Listado final** de archivos que no se pudieron traducir.
+- **Graphical interface** built with [Tkinter](https://docs.python.org/3/library/tkinter.html).
+- **Automatic translation** powered by `googletrans`.
+- **Optional auto-detection** of the source language.
+- **Supports** `.txt`, `.pdf`, and `.docx`.
+- **Preserves images** and basic formatting in `.docx` files.
+- **Progress bar** and a **cancel** button to stop the translation process.
+- **Automatic retries** up to 3 times in case of errors.
+- **Final list** of files that could not be translated.
 
-## Requisitos
+## Requirements
 
-- **Python 3.8+**  
-- Librerías:
+- **Python 3.8+**
+- Libraries:
   - `googletrans==4.0.0-rc1`
   - `langdetect`
   - `pdfminer.six`
   - `python-docx`
   - `plyer`
-  - `tkinter` (viene incluido con Python en la mayoría de instalaciones estándar)
-  - (Opcional) `requests`, `sentencepiece`, `transformers` si pruebas modelos offline
+  - `tkinter` (usually included with standard Python installations)
+  - (Optional) `requests`, `sentencepiece`, `transformers` if you test offline models
 
-Instálalas con:
+Install them with:
 ```bash
 pip install googletrans==4.0.0-rc1 langdetect pdfminer.six python-docx plyer
