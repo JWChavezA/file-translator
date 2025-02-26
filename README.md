@@ -1,5 +1,3 @@
-# file-translator
-File translator by quantities using the source folder address, using Python.
 # File Translator
 
 Este proyecto es una aplicación de escritorio en Python que traduce archivos de texto,
